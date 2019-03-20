@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth.guard';
+import { CallbackComponent } from './shared/callback/callback.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -10,7 +11,8 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     canActivate : [ AuthGuard ]
-  }
+  },
+  {path: 'callback', component: CallbackComponent},
 ];
 
 @NgModule({
