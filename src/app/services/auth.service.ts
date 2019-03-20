@@ -13,7 +13,7 @@ export class AuthService {
     clientID: 'caQdQv3w4e9ecnnI6d4CHzdE2kgqo3fB',
     domain: 'oscarchacon.auth0.com',
     responseType: 'token id_token',
-    redirectUri: 'http://localhost:3000/callback',
+    redirectUri: 'http://localhost:4200',
     scope: 'openid'
   });
 
