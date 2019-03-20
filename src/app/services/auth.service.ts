@@ -14,7 +14,7 @@ export class AuthService {
     domain: 'oscarchacon.auth0.com',
     responseType: 'token id_token',
     redirectUri: 'http://localhost:4200',
-    scope: 'openid'
+    scope: 'openid profile'
   });
 
   constructor(public router: Router) {

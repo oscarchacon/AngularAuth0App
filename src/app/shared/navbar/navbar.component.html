@@ -11,13 +11,13 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="IsAuthenticated()">
         <a routerLink="/profile" class="nav-link" routerLinkActive="active">Profile</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!IsAuthenticated()">
         <a class="nav-link" (click)="Login()" href="#">Login</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="IsAuthenticated()">
         <a class="nav-link" (click)="Logout()" href="#">Logout</a>
       </li>
     </ul>
