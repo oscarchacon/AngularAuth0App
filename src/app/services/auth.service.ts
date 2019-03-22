@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
-import { environment } from 'src/environments/environment';
+import { AUTH_VAR } from './auth-variables';
 
 @Injectable()
 export class AuthService {
@@ -11,11 +11,11 @@ export class AuthService {
   private _expiresAt: number;
 
   auth0 = new auth0.WebAuth({
-    clientID: environment.auth.clientID,
-    domain: environment.auth.domain,
+    clientID: AUTH_VAR.auth.clientID,
+    domain: AUTH_VAR.auth.domain,
     responseType: 'token id_token',
-    redirectUri: environment.auth.redirectUri,
-    scope: environment.auth.scope
+    redirectUri: AUTH_VAR.auth.redirectUri,
+    scope: AUTH_VAR.auth.scope
   });
 
   userProfile: any;
