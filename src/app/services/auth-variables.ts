@@ -4,6 +4,7 @@ export const AUTH_VAR = {
     domain: 'oscarchacon.auth0.com', // e.g., you.auth0.com
     //audience: '', // e.g., http://localhost:3001
     redirectUri: 'http://localhost:4200/callback',
+    logoutUrl: 'http://localhost:4200',
     scope: 'openid profile email'
   }
 };
